@@ -4,16 +4,67 @@
 }
 
 body {
+  height: 100vh;
+  margin: 1rem 0;
+  color: #ffffff;
+  background: -webkit-gradient(linear, left top, left bottom, from(#36c1ffff), to(#54dfd7ff)) no-repeat;
+  background: linear-gradient(#36c1ffff, #54dfd7ff) no-repeat;
+  font-family: Arial, Helvetica, sans-serif;
+  --skeleton-bg: #ffffffbb;
+  --skeleton-wave: #00000010;
+}
+
+::-webkit-scrollbar {
+  width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: inherit;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #252525;
+}
+
+h1 {
+  justify-self: flex-start;
+  text-align: center;
+}
+
+ul li {
+  list-style: none;
+}
+
+.example {
+  width: 66%;
+  max-width: 50rem;
+  margin: auto;
+}
+
+.example h2 {
+  text-align: center;
+}
+
+.example .description {
+  padding: 0 5rem;
+}
+
+.example > * {
+  margin: 1.5rem 0;
+}
+
+.display {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 1rem;
 }
 
-body > div {
+.display .text-content {
+  width: 100%;
+  max-width: 25rem;
   margin: 0 1rem;
 }
 /*# sourceMappingURL=style.css.map */

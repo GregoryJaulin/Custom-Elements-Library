@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,20 +9,37 @@
     <link rel="stylesheet" href="./styles/style.css">
 
     <script type="module" defer>
-        import Image from "./components/skeleton-img.js"
-        import Txt from "./components/skeleton-txt.js"
-        //import { Skeleton_Txt as Txt, Skeleton_Img as Image } from "./components/skeletons.js"
+        //import Image from "./components/skeleton-img.js"
+        //import Txt from "./components/skeleton-txt.js"
+        import { Skeleton_Txt as Txt, Skeleton_Img as Image } from "./components/skeletons.js"
 
         customElements.define("skeleton-img", Image)
         customElements.define("skeleton-txt", Txt)
     </script>
 </head>
+
 <body>
-    <skeleton-img height=200 width=250></skeleton-img>
-    <div>
-        <skeleton-txt width=5rem type=subtitle></skeleton-txt>
-        <skeleton-txt lines=2 width=25rem type=title></skeleton-txt>
-        <skeleton-txt lines=5 width=25rem text-align=left type=text></skeleton-txt>
+    <h1>Custom elements preview</h1>
+
+    <div id="skeletons" class="example">
+        <div class="description">
+            <h2>Skeletons</h2>
+            <p>
+                Skeletons are usefull to display content like a box even if it isn't load.
+                You can combine them with Javascript to stylize a bit your web page if using dynamic resources loading.
+                I've made two versions of skeleton box, one representing images, the other for text representation.
+            </p>
+        </div>
+
+        <div class="display">
+            <skeleton-img height=200 width=250></skeleton-img>
+            <div class="text-content">
+                <skeleton-txt width=5rem type=subtitle></skeleton-txt>
+                <skeleton-txt lines=2 type=title></skeleton-txt>
+                <skeleton-txt lines=5 text-align=left type=text></skeleton-txt>
+            </div>
+        </div>
     </div>
 </body>
+
 </html>
