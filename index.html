@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Elements Preview</title>
+
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <script type="module" defer>
+        import Image from "./components/skeleton-img.js"
+        import Txt from "./components/skeleton-txt.js"
+        //import { Skeleton_Txt as Txt, Skeleton_Img as Image } from "./components/skeletons.js"
+
+        customElements.define("skeleton-img", Image)
+        customElements.define("skeleton-txt", Txt)
+    </script>
+</head>
+<body>
+    <skeleton-img height=200 width=250></skeleton-img>
+    <div>
+        <skeleton-txt width=5rem type=subtitle></skeleton-txt>
+        <skeleton-txt lines=2 width=25rem type=title></skeleton-txt>
+        <skeleton-txt lines=5 width=25rem text-align=left type=text></skeleton-txt>
+    </div>
+</body>
+</html>
