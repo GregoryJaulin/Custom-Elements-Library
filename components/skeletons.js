@@ -84,7 +84,7 @@ class Skeleton_Txt extends Skeleton_Base {
                 ${type === 'text' ? 'transform: scale(1, .75);' : ''}
             }
 
-            span:last-child { width: ${lines !== 1 ? 30 + Math.random() * 40 + '%' : dimensions.width}; }
+            span:last-child { width: ${lines !== 1 ? 'calc(' + (.3 + Math.random() * .4) + ' * ' + dimensions.width + ')' : dimensions.width}; }
 
             span::after {
                 content: '';
@@ -94,7 +94,7 @@ class Skeleton_Txt extends Skeleton_Base {
                 height: 100%;
                 width: 100%;
 
-                background: linear-gradient(90deg, transparent, var(--skeleton-wave, rgba(0, 0, 0, .12)), transparent);;
+                background: linear-gradient(90deg, transparent, var(--skeleton-wave, rgba(0, 0, 0, .12)), transparent);
 
                 transform: translateX(-150%);
                 animation: wave 2s infinite;
